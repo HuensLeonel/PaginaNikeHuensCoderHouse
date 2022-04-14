@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Glitch&display=swap');
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+    body{
+        background-color: #404040;
+    }
+    
+    .sectionBody{
+        width: 97%;
+        margin: 1% auto;
+        height: 900px;
+        display: grid;
+        background-color: #282828;
+        grid-template-rows:1fr 3fr 2fr 3fr;
+        grid-template-columns: 1fr 3fr 3fr 3fr 3fr 4fr;
+        grid-template-areas: 
+        "navlateral nav nav nav nav nav"
+        "navlateral pres pres f1 f2 chat"
+        "navlateral f3 f4 f5 f6 chat"
+        "navlateral est est ran ran chat";
+        border-radius: 20px;
+        gap: 20px 10px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+    
+    .nav{
+        grid-area: nav; 
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    
+    .nav .perfil{
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .nav .perfil button{
+        margin-right: 5px;
+    }
+    
+    .nav .busqueda img{
+        display: none;
+    }
+    
+    .nav .busqueda input{
+        background:none; border:none; outline:0;
+        background-color: #404040;
+        border-radius: 20px;
+        width: 300px;
+        height: 40px;
+    }
+    
+    .nav .perfil button img{
+        height: 20px;
+    } 
+    
+    .navLateral{
+        grid-area: navlateral;
+        border-right: 1px solid #404040;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    
+    .navLateral .iconos{
+        margin: 0 auto 0 auto ;
+    }
+    
+    
+    .a{
+        background: rgb(40,40,40);
+        background: linear-gradient(32deg, rgba(40,40,40,1) 35%, rgba(64,64,64,1) 100%);
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #404040;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+    
+    .navLateral .iconos .img{
+        margin-top: 15px;
+    }
+    
+    .navLateral .configuracion{
+        margin: 0 auto 0 auto ;
+    }
+    
+    .navLateral .configuracion button{
+        margin-bottom:15px; 
+    }
+    
+    .fotoPresentacion{
+        grid-area: pres;
+        background-color: #ffff;
+        display: flex;
+        border-radius: 20px;
+    }
+    
+    .fotoPresentacion .tarjeta{
+        width: 50%;
+        margin-left:4%;
+        margin-top: 10%;
+    }
+    
+    .fotoPresentacion .tarjeta .precio{
+        margin-bottom:30px;
+    }
+    
+    .fotoPresentacion .tarjeta a{
+        background-color: #282828;
+        padding: 5px 25px;
+        border-radius: 20px;
+        color: #ffff;
+    }
+    
+    .fotoPresentacion .tarjeta h1{
+        font-size: 32px;
+        font-weight: 300;
+    }
+    
+    .fotoPresentacion .tarjeta h5{
+        margin-bottom: 15px;
+    }
+    
+    
+    .fotoPresentacion .foto{
+        width: 50%;
+    }
+    
+    .foto1{
+        grid-area:f1;
+        background-color: #ffff;
+        border-radius: 20px;
+    }
+    
+    .foto2{
+        grid-area: f2;
+        display: flex;
+        flex-direction: column;
+        max-height: 250px;
+    }
+    
+    .foto2 .fotoArriba{
+        height: 48%;
+        width: 100%;
+        margin-bottom: 4%;
+        border: 1px solid black; border-radius: 20px
+    }
+    
+    .foto2 .fotoArriba .img{
+        height: 100%; 
+        width: 100%;
+    }
+    
+    .foto2 .fotoAbajo{
+        height: 48%;
+        width: 100%;
+        border: 1px solid black; 
+        border-radius: 20px; 
+    }
+    
+    .foto2 .fotoArriba .img{
+        height: 100%; 
+        width: 100%;
+    }
+    
+    .chat{
+        grid-area: chat;
+        display: flex;
+        background: rgb(40,40,40);
+        background: linear-gradient(32deg, rgba(40,40,40,1) 35%, rgba(64,64,64,1) 100%);
+        border-radius: 20px;
+        border: 1px solid #404040;
+        flex-direction: column;
+        margin: 0 15px 15px 0;
+    }
+    
+    .chat .social{
+        height: 65%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items:center;
+        justify-conten:center;
+    }
+    
+    .chat .social .contSocial h2{
+        margin-top: 20px;
+        font-weight: 100;
+    }
+    
+    .usuSoc{
+        display: flex;
+        color: #ffff;
+        flex-direction: column;
+        justify-content:space-between;
+        padding: 5px;
+    }
+    
+    .chat .eventos{
+        height: 35%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items:center;
+        justify-conten:center;
+    }
+    
+    .chat .eventos hr{
+        width: 90px; 
+        margin-left: 10px;
+    }
+    
+    .chat .eventos h2{
+        margin: 20px;
+        font-weight: 100;
+    }
+    
+    .foto3{
+        grid-area: f3;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .fotoZapa{
+        background: rgb(40,40,40);
+        background: linear-gradient(32deg, rgba(40,40,40,1) 35%, rgba(64,64,64,1) 100%);
+        border-radius: 20px;
+        border: 1px solid #404040;
+        height: 150px;
+    }
+    
+    .detalleZapa{
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items:center;   
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    
+    .detalleZapa .btnAdd a{
+        color:#e3e3e3 ;
+        background-color: #282828;
+        padding: 5px 15px;
+        border-radius: 20px;
+        border: 1px solid #e3e3e3;
+        margin-right: 5px;
+    }
+    
+    .foto4{
+        grid-area: f4;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .foto5{
+        grid-area: f5;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .foto6{
+        grid-area: f6;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .estadisticas{
+        grid-area: est;
+        display: flex;
+        background: rgb(40,40,40);
+        background: linear-gradient(32deg, rgba(40,40,40,1) 35%, rgba(64,64,64,1) 100%);
+        border-radius: 20px;
+        border: 1px solid #404040;
+        margin-bottom: 15px;
+    }
+    
+    .barras{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:flex-start;
+    }
+    
+    progress{
+        background-color: #404040;
+        margin: 10px;
+    
+    }
+    
+    progress::-webkit-progress-value {
+        background-color: aquamarine;
+    }
+    
+    .reloj{
+        height: 100%;
+        width: 50%;
+    }
+    
+    .raking{
+        grid-area: ran;
+        display: flex;
+        flex-direction: column;
+        background: rgb(40,40,40);
+        background: linear-gradient(32deg, rgba(40,40,40,1) 35%, rgba(64,64,64,1) 100%);
+        border-radius: 20px;
+        border: 1px solid #404040;
+        margin-bottom: 15px;
+        justify-content:center;
+    }
+    
+    .usu{
+        display: flex;
+        color: #ffff;
+        flex-direction: row;
+        justify-content:space-between;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+/*MOBILE STYLE*/
+
+@media only screen and (max-width:650px) {
+
+    *{
+        padding: 0;
+        margin: 0%;
+        box-sizing: border-box;
+        list-style: none;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body{
+        background-color: #282828;
+    }
+
+    .sectionBody{
+        width: 100%;
+        display: grid;
+        grid-template-rows:1fr 3fr 2fr 2fr 2fr 3fr 3fr;
+        grid-template-columns: 3fr 3fr;
+        grid-template-areas: 
+        "nav nav"
+        "pres pres  "
+        "f1 f2 "
+        "f3 f4 " 
+        "est est"
+        "ran ran"
+        "f5 f6";
+        border-radius: 20px;
+        gap: 20px 10px;
+    }
+    
+    .navLateral{
+        width: 85%;
+        margin-right: 8%;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        bottom: 10px;
+        right: 0;
+        background-color: #282828;
+        border: 1px solid #e3e3e3;
+        border-radius: 20px;
+    }
+
+    .navLateral .configuracion{
+        display: none;
+    }
+
+    .navLateral .iconos .img{
+        display: none;
+    }
+
+    .navLateral .iconos ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLateral .iconos ul li{
+        margin: 0 20px 5px 0;
+    }
+
+    .chat{
+        display: none;
+    }
+
+    .nav .busqueda input{
+        display: none;
+    }
+
+    .nav .busqueda img{
+        display: inline;
+        margin-left: 15px;
+    }
+
+    .fotoPresentacion{
+        width: 96%;
+        margin: auto;
+        height: 200px;
+    }
+
+    .fotoPresentacion .tarjeta {
+        margin-top: 10px;
+    }
+
+    .fotoPresentacion .tarjeta .precio{
+        margin-bottom: 10px;
+    }
+
+    .foto1{
+        width: 100%;
+        margin: auto;
+    }
+
+    .foto2{
+        width: 85%;
+        margin: auto;
+    }
+
+    .foto5{
+        margin-bottom:100px;
+    }
+
+}
+
+@media only screen and (min-width:850px) and (max-width:1050px){
+
+    .sectionBody{
+        width:95%;      
+        margin: auto;
+        display: grid;
+        background-color: #282828;
+        grid-template-rows:1fr 3fr 2fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-template-areas: 
+        "nav nav nav nav "
+        "pres pres f1 f2 "
+        "f3 f4 f5 f6 "
+        "est est ran ran ";
+        border-radius: 20px;
+        gap: 10px 5px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    .nav{
+        width: 90%;
+        margin: auto;
+    }
+
+    .chat{
+        display: none;
+    }
+    .navLateral{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:650px) and (max-width:850px){
+    .sectionBody{
+        width:95%;      
+        margin: auto;
+        display: grid;
+        background-color: #282828;
+        grid-template-rows:1fr 3fr 2fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-template-areas: 
+        "nav nav nav nav "
+        "pres pres f1 f1 "
+        "f3 f4 f5 f6 "
+        "est est ran ran ";
+        border-radius: 20px;
+        gap: 10px 5px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    .nav{
+        width: 90%;
+        margin: auto;
+    }
+
+    .chat{
+        display: none;
+    }
+    .navLateral{
+        display: none;
+    }
+
+}
