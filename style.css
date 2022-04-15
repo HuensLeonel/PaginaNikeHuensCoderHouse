@@ -62,10 +62,6 @@
         height: 40px;
         transition: all 1s ease;
     }
-
-    .nav .busqueda input:hover{
-        
-    }
     
     .nav .perfil button img{
         height: 20px;
@@ -262,7 +258,6 @@
         flex-direction: column;
         text-align: center;
         align-items:center;
-        justify-conten:center;
     }
     
     .chat .social .contSocial h2{
@@ -285,7 +280,6 @@
         flex-direction: column;
         text-align: center;
         align-items:center;
-        justify-conten:center;
     }
     
     .chat .eventos hr{
